@@ -1,0 +1,31 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "import"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-unresolved": [1, { "commonjs": true, "amd": true }],
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "react/prop-types": "warn"
+  }
+}
